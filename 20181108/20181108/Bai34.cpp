@@ -5,6 +5,8 @@ int main() {
 	//khai bao tong S va nhap n
 	int n;
 	float S = 0;
+	cout << "nhap n: ";
+	cin >> n;
 	//chay vong for
 	for (int i = 1; i <= n; i++) {
 		S = sqrt(i + S);
