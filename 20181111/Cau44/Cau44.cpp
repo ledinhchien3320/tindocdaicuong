@@ -7,10 +7,11 @@ int main() {
 	int n, S = 0;
 	cout << "nhap mot so: ";
 	cin >> n;
+	//chay vong lap while de tach cac so va tinh tong cac so do
 	while (n) {
 		int i = n % 10;
 		S += i;
-		n = n / 10;
+		n /= 10;
 	}
 	cout << "Cau44= " << S << endl;
 	system("pause");
