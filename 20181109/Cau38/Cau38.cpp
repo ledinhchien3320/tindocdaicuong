@@ -1,6 +1,8 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
+
 using namespace std;
+
 int main() {
 	//tinh S= canbacN+1(n + canbacN(n-1 +...+canbac2(1))) co N dau can
 	//khai bao n,S 

@@ -1,6 +1,8 @@
 #include<iostream>
 #include<cmath>
+
 using namespace std;
+
 int main() {
 	//tinh tong S= canbacN(N + canbacN-1((N-1) +...+canbac3(3 + canbac2(2)) co n-1 dau can
 	//khai bao n tong S

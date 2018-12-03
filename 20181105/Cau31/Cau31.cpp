@@ -1,22 +1,41 @@
-#include<iostream>
+﻿#include <iostream>
 using namespace std;
-int main() {
-	//cho snd n, kiem tra xem n co phai la so nguyen to hay k
-	//so nguyen to la so chi chia het cho 1 va chinh no
-	//khai bao va nhap n
-	int n;
-	cout << "Nhap n: ";
-	cin >> n;
-	//dua ra dk de kiem tra xem n co phai la so nguyen to hay k
-	for (int i = 2; i < n; i++) {
-		if (n%n == 0 && n%i != 0) {
-			cout << "n la so nguyen to\n";
-		}
-		else
+bool soNguyenTo(int);
+bool soNguyenTo(int soA) // hàm bool trả về true/false
+{
+	if (soA < 2) // Nếu số A nhỏ hơn 2
+	{
+		return false;// trả về false
+	}
+	else if (soA > 2)// Nếu số A lớn hơn 2
+	{
+		if (soA % 2 == 0)  // Xét xem A có chia hết cho 2 không?
 		{
-			cout << "n khong la so nguyen to\n";
+			return false;// Nếu chia hết, return false.
+		}
+		for (int i = 3; i < sqrt((float)soA); i += 2)  // xét từ 3 đến căn bậc 2 của số A
+		{
+			if (soA%i == 0)  // nếu A chia hết cho một số nào đó trong đoạn này
+			{
+				return false;// trả về kết quả sai
+			}
 		}
 	}
+	return true;// sau tất cả các chỗ trên, nó mà không sai thì cuối cùng nó đúng :3
+}
+int main(int argc, char ** argv)
+{
+	int n; // khai bao so kiem tra la so nguyen
+	cout << "Nhap so can kiem tra?!" << endl;
+	cin >> n; // nhap vao so nguyen tu ban phim
+	if (soNguyenTo(n) == true)
+	{
+		cout << "So " << n << " la so nguyen to!!!!";
+	}
+	else
+	{
+		cout << "So " << n << " khong phai nguyen to!!!!";
+	}
 	system("pause");
-	return true;
+	return 0;
 }
