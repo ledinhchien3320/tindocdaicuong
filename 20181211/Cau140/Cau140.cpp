@@ -22,10 +22,10 @@ void Min(float a[], int n) {
 			GTNN = a[i];
 		}
 	}
-	cout << "Gia tri nho nhat la: " << GTNN << endl;
+	cout << "\nGia tri nho nhat la: " << GTNN << endl;
 }
 int main() {
-	//tim gia tri nho nhat trong mang mot chieu cac so thuc
+	//tim gia tri nho nhat trong mang mot chieu cac so thduc
 	float a[Max];
 	int n;
 		do {
